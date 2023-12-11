@@ -18,7 +18,7 @@ import java.util.UUID;
 
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.basicandroidmqttclient.MESSAGE";
-    public static final String brokerURI = "3.223.10.115";
+    public static final String brokerURI = "35.172.171.194";
 
     Activity thisActivity;
     TextView subMsgTextView;
@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         EditText topicName = (EditText) findViewById(R.id.editTextTopicName);
         EditText value = (EditText) findViewById(R.id.editTextValue);
+
 
         Mqtt5BlockingClient client = Mqtt5Client.builder()
                 .identifier(UUID.randomUUID().toString())
